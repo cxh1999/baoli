@@ -1,0 +1,243 @@
+//变量
+$color-red-1: #cc3333;
+$color-red-2: #df3030;
+$color-white-1: #c6cad6;
+$color-bg1:#d6d6d6;
+$btn-blue: linear-gradient(to right, #4de7eb, #31c9f2);
+$btn-blue1: linear-gradient(to right, #51f1f5, #31d3fc);
+$btn-purple: linear-gradient(to right, #c2d3ff, #aaa7f6);
+$btn-purple1: linear-gradient(to right, #c2d3ff, #b2afff);
+$btn-green: linear-gradient(to right, #dbe35b, #8dcb52);
+$btn-green1: linear-gradient(to right, #e5ed5c, #97d653);
+$btn-red: linear-gradient(to right, #fe426a, #be79cf);
+$btn-red1: linear-gradient(to right, #ff426a, #ab66bc);
+$btn-yellow: linear-gradient(to right, #f9c84b, #fa673d);
+$btn-yellow1: linear-gradient(to right, #ffcd4d, #ff693e);
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//样式
+.red1 {
+  color: $color-red-1;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mini-width {
+  width: 100px;
+}
+
+.btn-blue {
+  background: $btn-blue !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  &.btn-blue:hover {
+    background: $btn-blue1 !important;
+  }
+}
+
+.btn-green {
+  background: $btn-green !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  &.btn-green:hover {
+    background: $btn-green1 !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-red {
+  background: $btn-red !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  &.btn-red:hover {
+    background: $btn-red1 !important ;
+  }
+}
+
+.btn-yellow {
+  background: $btn-yellow !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  &.btn-yellow:hover {
+    background: $btn-yellow1 !important;
+  }
+}
+
+.btn-purple {
+  background: $btn-purple !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  &.btn-purple:hover {
+    background: $btn-purple1 !important;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+
+.big-dialog {
+  @media only screen and (max-width: 600px) {
+    /deep/ .el-dialog {
+      width: 90%;
+      min-width: 300px;
+      max-height: 80%;
+      .el-dialog__body {
+        padding: 15px 20px;
+      }
+    }
+  }
+  @media only screen and(min-width: 600px) and (max-width: 1200px){
+    /deep/ .el-dialog {
+      min-width: 500px;
+      width: 70%;
+      max-height: 70%;
+      .el-dialog__body {
+        padding: 15px 20px;
+      }
+    }
+  }
+  /deep/ .el-dialog {
+    max-height: 80%;
+    overflow-y: auto;
+    min-height: 400px;
+    .el-dialog__body {
+      padding: 15px 20px;
+    }
+  }
+}
+
+.back-list {
+  .list-item {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    &.list-item:hover {
+      background-color: #F2F6FC;
+    }
+  }
+}
+.tox-silver-sink {
+  z-index: 4000 !important;
+}
+.el-message-box {
+  width: 320px !important;
+}
+//.el-message {
+//  min-width: 320px !important;
+//}
+//.tox .tox-dialog-wrap {
+//  z-index: 4100 !important;
+//}
+//.tox .tox-dialog {
+//  z-index: 4000 !important;
+//}
+
+// --------------------------------------------------
+.common-css {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+
+  .wrapper {
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .nav {
+      padding: 6px 15px;
+      border-bottom: 1px solid #cccccc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .btn {
+        margin-right: 10px;
+      }
+    }
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      padding: 4px 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 3px 0 rgba(51, 51, 51, 0.06);
+
+      /deep/ .el-form-item--small.el-form-item {
+        margin-bottom: 0;
+      }
+
+      .left {
+        .el-select {
+          max-width: 130px;
+        }
+      }
+
+      .right {
+        margin-left: 10px;
+
+        .search-btn {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .table-list {
+      margin-top: 10px;
+      /deep/ .el-table__body-wrapper {
+        overflow-y: auto;
+      }
+
+      //.classify {
+      //  white-space: nowrap;
+      //  .iconfont {
+      //    font-weight: 700;
+      //  }
+      //}
+    }
+  }
+
+  .footer {
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      font-size: 13px;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+

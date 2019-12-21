@@ -1,0 +1,230 @@
+@import "~styles/mixins.scss";
+
+.login-warpper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //background-color: #091b58;
+  .wrapper {
+    position: relative;
+    //background: url("~img/login-bg.png") no-repeat center;
+    background-color: #08072f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .center-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .buttom-bg {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      //height: 150px;
+      img {
+        width: 100%;
+        height: 150px;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      left: 100px;
+      top: 70px;
+      width: 230px;
+      z-index: 9;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .title {
+      margin-top: 40px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 120px;
+      z-index: 9;
+
+      .en {
+
+      }
+
+      .ln {
+        font-size: 12px;
+        font-family: Arial, serif;
+      }
+
+      .logo-xs {
+        margin: 0 auto 20px;
+        width: 200px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .center-bg {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          width: 120%;
+          height: 120%;
+        }
+      }
+      .buttom-bg {
+        img {
+          height: 70px;
+        }
+      }
+      .title {
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        .en {
+          font-size: 22px;
+        }
+
+        .ln {
+          font-size: 9px;
+        }
+
+        .logo {
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+  }
+
+  .Login {
+    z-index: 9;
+    position: relative;
+    //background-color: rgba(255, 255, 255, .8);
+    opacity: 0.9;
+    background-color: #fff;
+    width: 400px;
+    //height: 380px;
+    padding: 30px 30px 0 30px;
+    box-sizing: border-box;
+    border: 1px solid #070c41;
+    border-radius: 10px;
+
+    .login-type {
+      color: #585858;
+      font-size: 14px;
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    input {
+      color: #333333;
+    }
+
+    /deep/ .el-form-item {
+      margin-bottom: 30px;
+    }
+
+    /deep/ .el-input__inner {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #585858;
+      opacity: 0.8;
+    }
+
+    /deep/ .el-input__inner:focus {
+      border-color: #dddddd !important;
+    }
+
+    /deep/ .el-button--medium {
+      border-radius: 20px;
+    }
+
+    /deep/ .el-input__icon {
+      color: $color-red-1;
+    }
+
+
+    .login-title {
+      text-align: center;
+      font-size: 24px;
+      color: #303030;
+      margin-bottom: 20px;
+    }
+
+    .get-captcha {
+      position: absolute;
+      right: 10px;
+      //top: 0;
+      bottom: 0;
+      height: 35px;
+      line-height: 35px;
+      //background-color: #fff;
+      //width: 115px;
+      z-index: 99;
+      cursor: pointer;
+      color: #333333;
+    }
+
+    .is-disable {
+      color: #909399;
+    }
+
+    .captcha {
+      position: absolute;
+      right: 10px;
+      //top: 0;
+      bottom: 5px;
+      height: 35px;
+      width: 115px;
+      z-index: 99;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .submit {
+      width: 100%;
+      background-color: $color-red-1;
+      border: none;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .Login {
+      width: 320px;
+      height: 350px;
+
+      /deep/  .el-form-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,16 @@
+/* 改变主题色变量 */
+@import "mixins";
+$--color-primary: #cc3333;
+$--color-text-primary:#333;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "../../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+.table-short .el-range-editor--mini.el-input__inner {
+  width: 220px;
+}
+.table-short .el-input__inner {
+  //max-width: 120px;
+  width: 120px;
+}
